@@ -13,7 +13,7 @@ class Person:
 p1 = Person("Arpit", "Gupta", 24)
 print(p1.full_name())
 
-# or
+# Actually what is happening in background
 
 p2 = Person("Bella", "Ciao", 5)
 print(Person.full_name(p2))
