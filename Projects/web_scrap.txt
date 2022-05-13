@@ -1,0 +1,18 @@
+import requests
+from bs4 import BeautifulSoup
+
+response = requests.get("https://news.ycombinator.com/news")
+
+soup_obj = BeautifulSoup(response.text, "html.parser")
+
+print(soup_obj.body)                # to select body
+print(soup_obj.body.content)        # to select content body
+print(soup_obj.find("a"))           # to find first anchor tag in html file
+print(soup_obj.find_all("a"))           # to find all anchor tag in html file
+
+
+
+# BeautifulSoup Selector works same as CSS selectors
+
+print(soup_obj.select(".score"))            # selecting class="score"
+print(soup_obj.select("#score_31365307"))   # selecting id="score_31365307"
